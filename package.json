@@ -1,0 +1,35 @@
+{
+  "name": "paint-be-like-server",
+  "version": "1.0.0",
+  "description": "Paint Be Like backend part",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "node build/app.js",
+    "dev": "nodemon",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quinsberry/paint-be-like-server.git"
+  },
+  "keywords": [
+    "paint"
+  ],
+  "author": "Eugene Kolesnyk <eugeniusz.kolesnyk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quinsberry/paint-be-like-server/issues"
+  },
+  "homepage": "https://github.com/quinsberry/paint-be-like-server#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.9",
+    "@types/express-ws": "^3.0.0",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-ws": "^4.0.0"
+  }
+}
