@@ -13,9 +13,14 @@ export interface Message<D> {
   data: D
 }
 
+export interface Connection {
+  id: string
+  username: string
+}
+
 appWS.app.ws('/', (ws: any, _: any) => {
   ws.on('message', (msg: string) => {
-    const msgObj: Message<any> = JSON.parse(msg)
+    const msgObj: Message<Connection> = JSON.parse(msg)
     switch (msgObj.method) {
       case WSMethods.connection:
         connectionHandler(ws, msgObj)
