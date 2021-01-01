@@ -6,7 +6,7 @@ Pain Be Like backend part. </br>
 [Link to client side source code](https://github.com/quinsberry/paint-be-like-client)</br>
 </br>
 
-**Technologies:** NodeJS, Websockets, Express, Typescript </br>
+**Technologies:** NodeJS, Websockets, Express, TypeScript </br>
 
 ## Installation
 

@@ -1,5 +1,8 @@
 import expressWs from 'express-ws'
-import { app, Connection, Message } from '../app'
+
+import { app } from '../app'
+
+import { Connection, Message } from '../types'
 
 export const appWS = expressWs(app)
 export const aWss = appWS.getWss()

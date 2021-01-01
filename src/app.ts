@@ -1,22 +1,19 @@
 import express from 'express'
+import cors from 'cors'
 export const app = express()
+import path from 'path'
 
 import { appWS, broadcastConnection, connectionHandler } from './core/websocket'
+import { Connection, Message, WSMethods } from './types'
+import { ImageCtrl } from './controllers/Image.controller'
 
-export enum WSMethods {
-  connection = 'connection',
-  draw = 'draw',
-}
+app.use(cors())
+app.use(express.json())
 
-export interface Message<D> {
-  method: WSMethods
-  data: D
-}
+export const appRoot = path.resolve(__dirname)
 
-export interface Connection {
-  id: string
-  username: string
-}
+app.post('/image', ImageCtrl.saveImage)
+app.post('/image-get', ImageCtrl.getImage)
 
 appWS.app.ws('/', (ws: any, _: any) => {
   ws.on('message', (msg: string) => {
